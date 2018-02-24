@@ -1,3 +1,4 @@
+import { Product } from './../../models/product';
 import { Component, OnInit } from '@angular/core';
 import { ProductSaveService } from '../../product-save.service';
 import { Subscription } from 'rxjs/Subscription';
@@ -9,7 +10,7 @@ import { OnDestroy } from '@angular/core/src/metadata/lifecycle_hooks';
   styleUrls: ['./admin-products.component.css']
 })
 export class AdminProductsComponent implements OnInit, OnDestroy {
-  product: {title: string}[];
+  product: Product[];
   subscription: Subscription;
   filteredProducts: any[];
 
