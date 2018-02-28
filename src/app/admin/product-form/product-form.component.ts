@@ -20,7 +20,7 @@ id;
     private route: ActivatedRoute,
     private productSaveService: ProductService) {
       //retrieving the categories for the dropdown
-    this.categories$ = categoryService.getCategories();
+    this.categories$ = categoryService.getAll();
 
      this.id = this.route.snapshot.paramMap.get('id');
       if(this.id) this.productSaveService.getProduct(this.id).take(1).subscribe(p => this.product = p);

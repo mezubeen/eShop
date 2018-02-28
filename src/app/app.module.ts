@@ -30,6 +30,8 @@ import { AdminProductsComponent } from './admin/admin-products/admin-products.co
 import { AdminOrdersComponent } from './admin/admin-orders/admin-orders.component';
 import { LoginComponent } from './login/login.component';
 import { ProductFormComponent } from './admin/product-form/product-form.component';
+import { ProductsFilterComponent } from './products/products-filter/products-filter.component';
+import { ProductCardComponent } from './product-card/product-card.component';
 
 
 
@@ -48,6 +50,8 @@ import { ProductFormComponent } from './admin/product-form/product-form.componen
     AdminOrdersComponent,
     LoginComponent,
     ProductFormComponent,
+    ProductsFilterComponent,
+    ProductCardComponent,
   ],
   imports: [
     BrowserModule,
@@ -59,7 +63,7 @@ import { ProductFormComponent } from './admin/product-form/product-form.componen
     AngularFireAuthModule,
     NgbModule.forRoot(),
     RouterModule.forRoot([
-      { path: '', component: HomeComponent },
+      { path: '', component: ProductsComponent },
       { path: 'login', component: LoginComponent },
       { path: 'products', component: ProductsComponent },
       { path: 'shopping-cart', component: ShoppingCartComponent },
