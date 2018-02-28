@@ -1,5 +1,5 @@
 import { Router, ActivatedRoute } from '@angular/router';
-import { ProductSaveService } from './../../product-save.service';
+import { ProductService } from './../../product.service';
 import { Component, OnInit } from '@angular/core';
 import { CategoryService } from '../../category.service';
 import 'rxjs/add/operator/take';
@@ -18,7 +18,7 @@ id;
     categoryService: CategoryService,
     private router: Router,
     private route: ActivatedRoute,
-    private productSaveService: ProductSaveService) {
+    private productSaveService: ProductService) {
       //retrieving the categories for the dropdown
     this.categories$ = categoryService.getCategories();
 

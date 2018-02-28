@@ -1,10 +1,11 @@
-import { ProductSaveService } from './product-save.service';
+import { ProductService } from './product.service';
 import { CategoryService } from './category.service';
 import { AdminAuthGuard } from './admin-auth-guard.service';
 import { UserService } from './user.service';
 import { AuthGuard } from './auth-guard.service';
 import { AuthService } from './auth.service';
 
+import { DataTableModule } from 'angular5-data-table';
 import { FormsModule } from '@angular/forms';
 import { CustomFormsModule } from 'ng2-validation'
 import { environment } from './../environments/environment';
@@ -51,6 +52,7 @@ import { ProductFormComponent } from './admin/product-form/product-form.componen
   imports: [
     BrowserModule,
     FormsModule,
+    DataTableModule,
     CustomFormsModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
@@ -97,7 +99,7 @@ import { ProductFormComponent } from './admin/product-form/product-form.componen
     AdminAuthGuard,
     UserService,
     CategoryService,
-    ProductSaveService
+    ProductService
   ],
   bootstrap: [AppComponent]
 })
